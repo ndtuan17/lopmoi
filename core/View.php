@@ -21,12 +21,11 @@ class View{
 
     $rd_path = $rd_matches[1];
     $rd_fileContents = file_get_contents(DIR . '/htmls/' . $rd_path . '.php');
-
     if(!isset($rd_matches[3])){
       $rd_code = $rd_fileContents;
     }else{
       $rd_class = $rd_matches[3];
-      $rd_viewRegex = '#<view class="' . $rd_class . '">(.*?)</view>#';
+      $rd_viewRegex = '#<view class="' . $rd_class . '">(.*?)</view>#s';
       preg_match($rd_viewRegex, $rd_fileContents, $rd_matches2);
       $rd_code = $rd_matches2[1];
     }
@@ -63,5 +62,8 @@ class View{
         $action($value);
       }
     }
+  }
+  private function get($childName){
+    return isset($this->childs[$childName]) ? $this->childs[$childName] : false;
   }
 }

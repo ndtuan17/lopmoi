@@ -1,0 +1,36 @@
+form.login{
+  width: 800px;
+  border: 1px solid #66f;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+form.login input{
+  border: 1px solid #66f;
+  border-radius: 12px;
+  background-color: unset;
+  padding: 10px;
+  width: 100%;
+}
+form.login input:focus{
+  border: 2px solid #66f;
+  box-shadow: unset;
+}
+form.login button{
+  width: 180px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #66f;
+  background-color: unset;
+  border: 1px solid #66f;
+  border-radius: 12px;
+}
+form button:hover{
+  color: #fff;
+  background-color: #66f;
+  cursor: pointer;
+}

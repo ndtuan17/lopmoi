@@ -13,7 +13,15 @@ class Model
 
   public function __construct()
   {
-    $this->pdo = new PDO('mysql:host=localhost;dbname=bka', 'root', '');
+    $this->pdo = new PDO('mysql:host=localhost;dbname=vngiasu', 'root', '');
+  }
+
+  protected static $instance;
+  public static function obj(): static{
+    if(!isset(static::$instance)){
+      static::$instance = new static;
+    }
+    return static::$instance;
   }
 
   public function select(string $columns = '*', $ids = null)

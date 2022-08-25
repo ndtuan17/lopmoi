@@ -8,11 +8,15 @@ function editorHome()
 {
   return html(
     'Biên tập viên',
-    body: 'abc'
+    body: headerEditor()
   );
 }
-function editorLogin(){
-  return html('Đăng nhập biên tập viên', body: '');
+function editorLogin()
+{
+  return html(
+    'Đăng nhập biên tập viên',
+    body: div('centerItem', loginForm('/bientap/login')),
+  );
 }
 
 function home()
@@ -23,4 +27,3 @@ function home()
     body: 'Xin chao moi nguoi'
   );
 }
-

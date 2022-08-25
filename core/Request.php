@@ -15,13 +15,15 @@ class Request
     if (self::method() == 'GET') {
       return true;
     }
+    $csrfFlash = Session::flash('csrfToken');
     if (
-      !Session::flash('_csrf_token') ||
-      !self::postedInput('_csrf_token') ||
-      Session::flash('_csrf_token') != Request::postedInput('_csrf_token')
+      !$csrfFlash ||
+      !self::postedInput('_csrf') ||
+      $csrfFlash != Request::postedInput('_csrf')
     ) {
       throw new Exception('csrf');
     }
+    return true;
   }
 
   public static function method(): string
@@ -81,5 +83,10 @@ class Request
   public static function gettedKeys()
   {
     return array_keys(self::gettedInput());
+  }
+
+  public static function filterPosted(...$keys){
+    $postedInput = self::postedInput();
+    return array_only($keys, $postedInput);
   }
 }

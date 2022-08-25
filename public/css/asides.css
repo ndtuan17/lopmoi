@@ -1,0 +1,15 @@
+aside.editor{
+
+}
+aside.editor a{
+  display: inline-block;
+  width: 100%;
+  padding: 5px 15px;
+  color: #55a;
+}
+
+aside.editor a:hover{
+  background-color: #77d;
+  color: #fff;
+  font-size: 20px;
+}
