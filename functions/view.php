@@ -4,12 +4,18 @@ use core\Session;
 use core\View;
 
 
-function show($view){
-  include_once '../pages.php';
-  if($view instanceof View){
-    $view->render();
+function show($views){
+  if(is_array($views)){
+    foreach($views as $view){
+      show($view);
+    }
   }else{
-    echo $view;
+    $view = $views;
+    if($view instanceof View){
+      $view->render();
+    }else{
+      echo $view;
+    }
   }
 }
 

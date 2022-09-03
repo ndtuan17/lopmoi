@@ -33,3 +33,6 @@ function strSetValues($values){
   }
   return $str;
 }
+function strArray($array){
+  return '(' . implode(', ', $array) . ')';
+}

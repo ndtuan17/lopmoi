@@ -1,14 +1,19 @@
 <?php
 
-include_once 'views.php';
-
 use core\View;
 
 function editorHome()
 {
   return html(
     'Biên tập viên',
-    body: headerEditor()
+    css: ['/css/layouts/editor.css', '/css/pages/editorHome.css'],
+    body: [
+      headerEditor(),
+      div('main', [
+        asideEditor(),
+        div('content', loginForm('')),
+      ]),
+    ]
   );
 }
 function editorLogin()
@@ -17,6 +22,16 @@ function editorLogin()
     'Đăng nhập biên tập viên',
     body: div('centerItem', loginForm('/bientap/login')),
   );
+}
+function editorCenterIndex(){
+  return html('Quan ly trung tam',
+  body: [
+    headerEditor(),
+    div('main', [
+      asideEditor(),
+      div('content', )
+    ])
+  ])
 }
 
 function home()

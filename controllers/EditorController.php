@@ -37,6 +37,7 @@ class EditorController{
     }
     show(editorHome());
   }
+  
   public function logout(){
     User::logout();
     redirectTo('bientap/login');

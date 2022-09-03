@@ -16,8 +16,8 @@ spl_autoload_register(function ($className){
 
 include_once 'functions/general.php';
 include_once 'functions/view.php';
-include_once 'pages.php';
-
+include_once 'view/pages.php';
+include_once 'view/boxes.php';
 
 
 

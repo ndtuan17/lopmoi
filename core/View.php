@@ -20,7 +20,7 @@ class View{
     preg_match($rd_pathRegex, $this->path, $rd_matches);
 
     $rd_path = $rd_matches[1];
-    $rd_fileContents = file_get_contents(DIR . '/htmls/' . $rd_path . '.php');
+    $rd_fileContents = file_get_contents(DIR . '/view/html/' . $rd_path . '.php');
     if(!isset($rd_matches[3])){
       $rd_code = $rd_fileContents;
     }else{
@@ -36,11 +36,7 @@ class View{
     if(!isset($this->childs[$childName])){
       return;
     }
-    $child = $this->childs[$childName];
-    if($child instanceof View){
-      return $child->render();
-    }
-    echo $child;
+    show($this->childs[$childName]);
   }
 
   private function write($childName){

@@ -1,5 +1,4 @@
 <view class="simple">
-  <link rel="stylesheet" href="/css/buttons.css">
   <?php
   if ($this->get('method') == 'GET') {
   ?>

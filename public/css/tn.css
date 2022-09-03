@@ -1,19 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
-html *{
+html * {
   font-family: 'Roboto', 'sans-serif';
 }
-body{
+
+body {
   margin: 0px;
 }
-label.error{
+
+label.error {
   display: block;
   width: 100%;
   color: red;
 }
-a{
+
+a {
   text-decoration: none;
 }
-:is(a, button):hover{
+
+:is(a, button):hover {
   cursor: pointer;
+}
+
+
+aside.editor {
+  border-right: 1px solid #66d;
+}
+
+aside.editor a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 15px;
+  color: #55a;
+}
+
+aside.editor a:hover {
+  background-color: #77d;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+a.btn {
+  display: inline-block;
+}
+
+form.btn {
+  display: inline-block;
+}
+
+form.btn>button,
+a.btn {
+  padding: 10px 20px;
+  border: 1px solid #55b;
+  border-radius: 15px;
+  color: #55b;
+  background-color: unset;
+}
+
+:is(form.btn>button, a.btn):hover {
+  background-color: #55b;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+div.centerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+
+
+form.login {
+  width: 800px;
+  border: 1px solid #66f;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+form.login input {
+  border: 1px solid #66f;
+  border-radius: 12px;
+  background-color: unset;
+  padding: 10px;
+  width: 100%;
+}
+
+form.login input:focus {
+  border: 2px solid #66f;
+  box-shadow: unset;
+}
+
+form.login button {
+  width: 180px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #66f;
+  background-color: unset;
+  border: 1px solid #66f;
+  border-radius: 12px;
+}
+
+form button:hover {
+  color: #fff;
+  background-color: #66f;
+  cursor: pointer;
+}
+
+
+header.editor {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #88f;
+  height: 70px;
+  align-items: center;
+  padding: 0px 20px;
 }

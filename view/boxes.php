@@ -21,3 +21,7 @@ function button($method, $path, $classes = '', $inner){
 function headerEditor(){
   return new View('headers.editor');
 }
+
+function asideEditor(){
+  return new View('asides.editor');
+}
