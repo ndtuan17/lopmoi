@@ -1,13 +1,13 @@
 <?php
 
-namespace controllers;
+namespace controllers\pages;
 
 use core\Request;
 use Exception;
 use models\Center;
 use repositories\CenterRepo;
 
-class CenterController{
+class CenterPage{
   
   public function index(){
     /**

@@ -4,62 +4,47 @@ namespace core;
 
 use Exception;
 
-class View{
+class View
+{
 
   private string $path;
-  private $childs;
 
-  public function __construct(string $path, $childs = [])
+  public function __construct(string $path, $props = [])
   {
     $this->path = $path;
-    $this->childs = $childs;
+    foreach($props as $propName => $value){
+      $this->$propName = $value;
+    }
   }
 
-  public function render(){
-    $rd_pathRegex = '#^([\w/]+)(\.(\w+))?$#';
+  public function render()
+  {
+    $rd_pathRegex = '#^[\w/]+$#';
     preg_match($rd_pathRegex, $this->path, $rd_matches);
 
-    $rd_path = $rd_matches[1];
-    $rd_fileContents = file_get_contents(DIR . '/view/html/' . $rd_path . '.php');
-    if(!isset($rd_matches[3])){
-      $rd_code = $rd_fileContents;
-    }else{
-      $rd_class = $rd_matches[3];
-      $rd_viewRegex = '#<view class="' . $rd_class . '">(.*?)</view>#s';
-      preg_match($rd_viewRegex, $rd_fileContents, $rd_matches2);
-      $rd_code = $rd_matches2[1];
-    }
-    eval('?>' . $rd_code);
+    $rd_path = $rd_matches[0];
+    $rd_fileContents = file_get_contents(DIR . '/view/' . $rd_path . '.php');
+    eval('?>' . $rd_fileContents);
   }
 
-  private function show($childName){
-    if(!isset($this->childs[$childName])){
+  private function show($propName)
+  {
+    if (!isset($this->$propName)) {
       return;
     }
-    show($this->childs[$childName]);
+    show($this->$propName);
   }
 
-  private function write($childName){
-    if(!isset($this->childs[$childName])){
+  private function write($propName)
+  {
+    if (!isset($this->$propName)) {
       return;
     }
-    echo htmlspecialchars($this->childs[$childName]);
+    echo htmlspecialchars($this->$propName);
   }
 
-  private function browse($childName, $action){
-    if(!isset($this->childs[$childName])){
-      return;
-    }
-    $child = $this->childs[$childName];
-    if(!is_array($child)){
-      $action($child);
-    }else{
-      foreach($child as $value){
-        $action($value);
-      }
-    }
-  }
-  private function get($childName){
-    return isset($this->childs[$childName]) ? $this->childs[$childName] : false;
+  private function get($propName)
+  {
+    return isset($this->$propName) ? $this->$propName : false;
   }
 }

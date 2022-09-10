@@ -1,37 +1,48 @@
 <?php
 
-use core\Session;
 use core\View;
 
 
-function show($views){
-  if(is_array($views)){
-    foreach($views as $view){
+function show($views)
+{
+  if (is_array($views)) {
+    foreach ($views as $view) {
       show($view);
     }
-  }else{
+  } else {
     $view = $views;
-    if($view instanceof View){
+    if ($view instanceof View) {
       $view->render();
-    }else{
+    } else {
       echo $view;
     }
   }
 }
 
-function write($str){
+function write($str)
+{
   echo htmlspecialchars($str);
 }
 
-function showCsrfInput(){
-  $csrfToken = rand();
-  Session::setFlash('csrfToken', $csrfToken);
-  echo '<input type="hidden" name="_csrf" value="'.$csrfToken.'">';
+function view($path, $childs = []): View
+{
+  return new View($path, $childs);
 }
 
-function showMethodInput($method){
-  if($method == 'POST'){
-    return;
-  }
-  echo '<input type="hidden" name="_method" value="'.$method.'">';
+function showPage($title, $body)
+{
+  view('htmls/html', [
+    'title' => $title,
+    'body' => $body
+  ])->render();
+}
+
+function layout($path, $childs = [])
+{
+  return view('layouts/' . $path, $childs);
+}
+
+function main($path, $childs = [])
+{
+  return view('mains/' . $path, $childs);
 }

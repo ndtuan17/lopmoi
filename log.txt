@@ -1,1 +1,1258 @@
-vao index
+POST
+api/bientap/login
+execute
+vao login
+POST
+api/bientap/login
+execute
+vao login
+Error::__set_state(array(
+   'message' => 'Call to undefined function showCsrfInput()',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+   'line' => 12,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+      'line' => 6,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'buttons.simple',
+           'childs' => 
+          array (
+            'method' => 'POST',
+            'path' => '/bientap/logout',
+            'classes' => 'btn',
+            'inner' => 'Đăng xuất',
+          ),
+        )),
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    4 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 10,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'headers.editor',
+           'childs' => 
+          array (
+          ),
+        )),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 39,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          core\View::__set_state(array(
+             'path' => 'headers.editor',
+             'childs' => 
+            array (
+            ),
+          )),
+          1 => 
+          core\View::__set_state(array(
+             'path' => 'divs.simple',
+             'childs' => 
+            array (
+              'inner' => 
+              array (
+                0 => 
+                core\View::__set_state(array(
+                   'path' => 'asides.editor',
+                   'childs' => 
+                  array (
+                  ),
+                )),
+                1 => 
+                core\View::__set_state(array(
+                   'path' => 'divs.simple',
+                   'childs' => 
+                  array (
+                    'inner' => 
+                    core\View::__set_state(array(
+                       'path' => 'forms.login',
+                       'childs' => 
+                      array (
+                        'path' => '',
+                        'method' => 'POST',
+                      ),
+                    )),
+                    'classes' => 'content',
+                  ),
+                )),
+              ),
+              'classes' => 'main',
+            ),
+          )),
+        ),
+      ),
+    ),
+    7 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+      'line' => 16,
+      'function' => 'show',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'body',
+      ),
+    ),
+    8 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    9 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    10 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\controllers\\pages\\EditorPage.php',
+      'line' => 21,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'html',
+           'childs' => 
+          array (
+            'title' => 'Biên tập viên',
+            'css' => 
+            array (
+              0 => '/css/layouts/editor.css',
+              1 => '/css/pages/editorHome.css',
+            ),
+            'js' => NULL,
+            'body' => 
+            array (
+              0 => 
+              core\View::__set_state(array(
+                 'path' => 'headers.editor',
+                 'childs' => 
+                array (
+                ),
+              )),
+              1 => 
+              core\View::__set_state(array(
+                 'path' => 'divs.simple',
+                 'childs' => 
+                array (
+                  'inner' => 
+                  array (
+                    0 => 
+                    core\View::__set_state(array(
+                       'path' => 'asides.editor',
+                       'childs' => 
+                      array (
+                      ),
+                    )),
+                    1 => 
+                    core\View::__set_state(array(
+                       'path' => 'divs.simple',
+                       'childs' => 
+                      array (
+                        'inner' => 
+                        core\View::__set_state(array(
+                           'path' => 'forms.login',
+                           'childs' => 
+                          array (
+                            'path' => '',
+                            'method' => 'POST',
+                          ),
+                        )),
+                        'classes' => 'content',
+                      ),
+                    )),
+                  ),
+                  'classes' => 'main',
+                ),
+              )),
+            ),
+          ),
+        )),
+      ),
+    ),
+    11 => 
+    array (
+      'function' => 'home',
+      'class' => 'controllers\\pages\\EditorPage',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    12 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+      'line' => 26,
+      'function' => 'call_user_func',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          controllers\pages\EditorPage::__set_state(array(
+          )),
+          1 => 'home',
+        ),
+      ),
+    ),
+    13 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+      'line' => 62,
+      'function' => 'execute',
+      'class' => 'core\\Route',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    14 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 50,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    15 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Error::__set_state(array(
+   'message' => 'Call to undefined function showCsrfInput()',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+   'line' => 12,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    2 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+      'line' => 6,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'buttons.simple',
+           'childs' => 
+          array (
+            'method' => 'POST',
+            'path' => '/bientap/logout',
+            'classes' => 'btn',
+            'inner' => 'Đăng xuất',
+          ),
+        )),
+      ),
+    ),
+    3 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    4 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    5 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 10,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'headers.editor',
+           'childs' => 
+          array (
+          ),
+        )),
+      ),
+    ),
+    6 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 39,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          core\View::__set_state(array(
+             'path' => 'headers.editor',
+             'childs' => 
+            array (
+            ),
+          )),
+          1 => 
+          core\View::__set_state(array(
+             'path' => 'divs.simple',
+             'childs' => 
+            array (
+              'inner' => 
+              array (
+                0 => 
+                core\View::__set_state(array(
+                   'path' => 'asides.editor',
+                   'childs' => 
+                  array (
+                  ),
+                )),
+                1 => 
+                core\View::__set_state(array(
+                   'path' => 'divs.simple',
+                   'childs' => 
+                  array (
+                    'inner' => 
+                    core\View::__set_state(array(
+                       'path' => 'forms.login',
+                       'childs' => 
+                      array (
+                        'path' => '',
+                        'method' => 'POST',
+                      ),
+                    )),
+                    'classes' => 'content',
+                  ),
+                )),
+              ),
+              'classes' => 'main',
+            ),
+          )),
+        ),
+      ),
+    ),
+    7 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php(32) : eval()\'d code',
+      'line' => 16,
+      'function' => 'show',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'body',
+      ),
+    ),
+    8 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\View.php',
+      'line' => 32,
+      'function' => 'eval',
+    ),
+    9 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\functions\\view.php',
+      'line' => 15,
+      'function' => 'render',
+      'class' => 'core\\View',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    10 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\controllers\\pages\\EditorPage.php',
+      'line' => 21,
+      'function' => 'show',
+      'args' => 
+      array (
+        0 => 
+        core\View::__set_state(array(
+           'path' => 'html',
+           'childs' => 
+          array (
+            'title' => 'Biên tập viên',
+            'css' => 
+            array (
+              0 => '/css/layouts/editor.css',
+              1 => '/css/pages/editorHome.css',
+            ),
+            'js' => NULL,
+            'body' => 
+            array (
+              0 => 
+              core\View::__set_state(array(
+                 'path' => 'headers.editor',
+                 'childs' => 
+                array (
+                ),
+              )),
+              1 => 
+              core\View::__set_state(array(
+                 'path' => 'divs.simple',
+                 'childs' => 
+                array (
+                  'inner' => 
+                  array (
+                    0 => 
+                    core\View::__set_state(array(
+                       'path' => 'asides.editor',
+                       'childs' => 
+                      array (
+                      ),
+                    )),
+                    1 => 
+                    core\View::__set_state(array(
+                       'path' => 'divs.simple',
+                       'childs' => 
+                      array (
+                        'inner' => 
+                        core\View::__set_state(array(
+                           'path' => 'forms.login',
+                           'childs' => 
+                          array (
+                            'path' => '',
+                            'method' => 'POST',
+                          ),
+                        )),
+                        'classes' => 'content',
+                      ),
+                    )),
+                  ),
+                  'classes' => 'main',
+                ),
+              )),
+            ),
+          ),
+        )),
+      ),
+    ),
+    11 => 
+    array (
+      'function' => 'home',
+      'class' => 'controllers\\pages\\EditorPage',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    12 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+      'line' => 26,
+      'function' => 'call_user_func',
+      'args' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          controllers\pages\EditorPage::__set_state(array(
+          )),
+          1 => 'home',
+        ),
+      ),
+    ),
+    13 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+      'line' => 62,
+      'function' => 'execute',
+      'class' => 'core\\Route',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+    14 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 50,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    15 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 50,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 50,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
+Exception::__set_state(array(
+   'message' => '404',
+   'string' => '',
+   'code' => 0,
+   'file' => 'D:\\projects\\vngiasu\\core\\Route.php',
+   'line' => 65,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\application.php',
+      'line' => 48,
+      'function' => 'exec',
+      'class' => 'core\\Route',
+      'type' => '::',
+      'args' => 
+      array (
+      ),
+    ),
+    1 => 
+    array (
+      'file' => 'D:\\projects\\vngiasu\\public\\index.php',
+      'line' => 8,
+      'args' => 
+      array (
+        0 => 'D:\\projects\\vngiasu\\application.php',
+      ),
+      'function' => 'require_once',
+    ),
+  ),
+   'previous' => NULL,
+))
