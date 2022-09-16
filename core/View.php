@@ -12,7 +12,7 @@ class View
   public function __construct(string $path, $props = [])
   {
     $this->path = $path;
-    foreach($props as $propName => $value){
+    foreach ($props as $propName => $value) {
       $this->$propName = $value;
     }
   }

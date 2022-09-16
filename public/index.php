@@ -1,8 +1,5 @@
 <?php
 
+// require '../gates/rate_limiter.php';
 
-
-
-
-
-require_once '../application.php';
+require '../application.php';

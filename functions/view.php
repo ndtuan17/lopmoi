@@ -13,8 +13,10 @@ function show($views)
     $view = $views;
     if ($view instanceof View) {
       $view->render();
-    } else {
+    } elseif (is_string($view)) {
       echo $view;
+    } else {
+      $view();
     }
   }
 }
@@ -29,20 +31,7 @@ function view($path, $childs = []): View
   return new View($path, $childs);
 }
 
-function showPage($title, $body)
-{
-  view('htmls/html', [
-    'title' => $title,
-    'body' => $body
-  ])->render();
+function display($path, $childs = []){
+  view($path, $childs)->render();
 }
 
-function layout($path, $childs = [])
-{
-  return view('layouts/' . $path, $childs);
-}
-
-function main($path, $childs = [])
-{
-  return view('mains/' . $path, $childs);
-}

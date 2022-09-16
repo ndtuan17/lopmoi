@@ -1,13 +1,13 @@
 <?php
 
-namespace controllers\pages;
+namespace controllers;
 
 use core\Request;
 use Exception;
 use models\Center;
 use repositories\CenterRepo;
 
-class CenterPage{
+class CenterController{
   
   public function index(){
     /**
@@ -74,11 +74,5 @@ class CenterPage{
       throw new Exception('500');
     }
     redirectTo('/centers');
-  }
-
-  public function delete(){
-    $ids = Request::postedInput('ids');
-    $countAffected = CenterRepo::delete($ids);
-    if()
   }
 }
