@@ -1,10 +1,11 @@
 <?php
 
-$layout = view('layouts/guest/home');
-$layout->title = 'Lopmoi | Về chúng tôi';
-$layout->body = function(){
+$view = view('layouts/guest');
+$view->title = 'Lopmoi | Về chúng tôi';
+$view->main = function(){
   ?>
   <p>Lopmoi.com la trung tam gia su Bố Láo nhất cái Hà Nội này</p>
   <?php
 };
-return $layout;
+
+$view->render();

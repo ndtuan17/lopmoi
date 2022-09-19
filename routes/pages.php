@@ -17,7 +17,7 @@ use repositories\CenterRepo;
 Route::get('', [StaticController::class, 'home']);
 Route::get('danh-sach-lop', [ClassController::class, 'all']);
 Route::get('danh-sach-cac-trung-tam', [CenterController::class, 'all']);
-Route::get('tao-cv-gia-su', [StaticController::class, 'create_cv']);
+Route::get('tao-cv-gia-su', [CVController::class, 'all_templates']);
 Route::get('dien-dan-gia-su', [TutorPostController::class, 'all']);
 Route::get('bai-viet', [PostController::class, 'all']);
 Route::get('gioi-thieu-lopmoi', [StaticController::class, 'about_us']);

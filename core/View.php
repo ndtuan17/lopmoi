@@ -19,7 +19,7 @@ class View
 
   public function render()
   {
-    $rd_pathRegex = '#^[\w/]+$#';
+    $rd_pathRegex = '#^[\w/-]+$#';
     preg_match($rd_pathRegex, $this->path, $rd_matches);
 
     $rd_path = $rd_matches[0];
