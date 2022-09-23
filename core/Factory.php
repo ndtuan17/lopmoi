@@ -10,5 +10,6 @@ class Factory
 {
   public static PDO $pdo;
   public static Request $request;
-  public static Auth $auth;
+  public static User $user;
+  public static Token $token;
 }

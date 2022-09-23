@@ -26,7 +26,7 @@
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/flex-start.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.11.0
@@ -49,37 +49,29 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/">Trang chủ</a></li>
-          <li class="dropdown"><a href="javascript:void(0)"><span>Cho gia sư</span><i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="javascript:void(0)"><span>GIA SƯ</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/danh-sach-lop">Danh sách lớp</a></li>
-              <li><a href="/danh-sach-cac-trung-tam">Các trung tâm</a></li>
-              <li><a href="/tao-cv-gia-su">Tạo CV</a></li>
+              <li><a href="<?=PRE_URL?>danh-sach-lop">Danh sách lớp</a></li>
+              <li><a href="<?=PRE_URL?>danh-sach-cac-trung-tam">Các trung tâm</a></li>
+              <li><a href="<?=PRE_URL?>tao-cv-gia-su">Tạo CV</a></li>
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#about">Danh sách lớp</a></li>
           <li><a class="nav-link scrollto" href="#services">Các trung tâm</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Tạo CV</a></li> -->
-          <li class="dropdown"><a href="javascript:void(0)"><span>Cộng đồng</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="javascript:void(0)"><span>PHỤ HUYNH</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/dien-dan-gia-su">Diễn đàn gia sư</a></li>
-              <li><a href="https://www.facebook.com/groups/timkiemgiasuhanoi">Nhóm GIA SƯ HÀ NỘI</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
-              <li><a href="#">Fanpage Lớp mới</a></li>
-              <!-- <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li> -->
+              <li><a href="<?=PRE_URL?>danh-sach-gia-su">Danh sách gia sư</a></li>
+              <li><a href="<?=PRE_URL?>lien-he">Liên hệ</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#team">Blog</a></li>
-          <!-- <li><a href="blog.html">Blog</a></li> -->
+
+          <li class="dropdown"><a href="javascript:void(0)"><span>LOPMOI</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="https://www.facebook.com/groups/timkiemgiasuhanoi">Nhóm GIA SƯ HÀ NỘI</a></li>
+              <li><a href="#">Fanpage Lớp mới</a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="#contact">Đăng nhập</a></li>
           <li><a class="getstarted scrollto" href="#about">Đăng ký</a></li>
         </ul>

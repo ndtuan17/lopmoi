@@ -27,4 +27,10 @@ class ClassController
     display('pages/guest/classes', compact('classes'));
   }
 
+  public function filter(){
+    $subject_ids = [1, 3, 5];
+    $ranks = [0, 1];
+    $grades = [1, 2, 3, 4];
+  }
+
 }

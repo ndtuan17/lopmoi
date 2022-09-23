@@ -22,18 +22,13 @@ include_once 'functions/utils.php';
 include_once 'functions/sql.php';
 include_once 'functions/view.php';
 
+include_once 'functions/debug.php';
 
-
-// include_once 'handlers/exceptions.php';
-// set_exception_handler('handleException');
-
-
-
-// include_once 'functions/debug.php';
+include_once 'handlers/exceptions.php';
+set_error_handler('handleException');
+set_exception_handler('handleException');
 
 
 
-
-
-include_once 'routes/pages.php';
+include_once 'routes.php';
 Route::exec();

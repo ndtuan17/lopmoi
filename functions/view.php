@@ -25,6 +25,9 @@ function write($str)
 {
   echo htmlspecialchars($str);
 }
+function filted($str){
+  return htmlspecialchars($str);
+}
 
 function view($path, $childs = []): View
 {

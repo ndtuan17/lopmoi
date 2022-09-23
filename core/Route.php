@@ -6,62 +6,63 @@ use Exception;
 
 class Route
 {
-
-  private $method;
-  private $path;
-  private $input = [];
-  private $action;
-
-  public function __construct($method, $path, $input, $action)
-  {
-    $this->method = $method;
-    $this->path = $path;
-    $this->input = $input;
-    $this->action = $action;
-  }
-
-  private function execute()
-  {
-    if (is_array($this->action)) {
-      call_user_func([new $this->action[0], $this->action[1]]);
-    } else {
-      ($this->action)();
-    }
-  }
-  private function matched()
-  {
-    if (
-      $this->method != request()->method()
-      || $this->path != request()->path()
-      || $this->input != request()->gettedKeys()
-    ) {
-      return false;
-    }
-    return true;
-  }
-
   private static $routes = [];
 
-  public static function get($path, $action, $input = [])
+
+  public static function get($path, $action)
   {
-    self::$routes[] = new Route('GET', $path, $input, $action);
+    self::add('GET', $path, $action);
   }
-  public static function add($method, $path, $action, $input = [])
+  public static function post($path, $action)
   {
-    self::$routes[] = new Route($method, $path, $input, $action);
+    self::add('POST', $path, $action);
   }
-  public static function api($method, $path, $action, $input = [])
+  public static function put($path, $action)
   {
-    self::$routes[] = new Route($method, 'api/' . $path, $input, $action);
+    self::add('PUT', $path, $action);
+  }
+  public static function delete($path, $action)
+  {
+    self::add('DELETE', $path, $action);
+  }
+  private static function add($method, $path, $action)
+  {
+    self::$routes[] = [
+      'method' => $method,
+      'path' => $path,
+      'action' => $action
+    ];
   }
 
   public static function exec()
   {
     foreach (self::$routes as $route) {
-      if ($route->matched()) {
-        return $route->execute();
+      if (self::match($route)) {
+        return self::execute($route);
       }
     }
     throw new Exception('404');
+  }
+
+  private static function match($route)
+  {
+    if ($route['method'] !== request()->method()) {
+      return false;
+    }
+    $regex = regexRoute($route['path']);
+    preg_match($regex, request()->path(), $matches);
+    if (!$matches) {
+      return false;
+    }
+    return true;
+  }
+
+  private static function execute($route)
+  {
+    if (is_array($route['action'])) {
+      call_user_func([new $route['action'][0], $route['action'][1]]);
+    } else {
+      $route['action']();
+    }
   }
 }
