@@ -5,6 +5,21 @@ namespace controllers;
 class ClassController
 {
 
+  public function dashboard(){
+    if(!user()->type('admin')){
+      redirectTo('bientap/login');
+    }
+    
+    display('pages/admin/class/dashboard');
+  }
+
+  public function adminCreate(){
+    if(!user()->type('admin')){
+      redirectTo('bientap/login');
+    }
+    display('pages/admin/class/create');
+  }
+
   public function all(){
     $classes = [
       [

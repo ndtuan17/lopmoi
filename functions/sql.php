@@ -23,28 +23,12 @@ function fetch(string $query, array $values = null)
 function execute(string $statement, array $values = null): PDOStatement|false
 {
   $prepare = pdo()->prepare($statement);
-  try {
+  // try {
     $prepare->execute($values);
-  } catch (Exception $e) {
-    return false;
-  }
+  // } catch (Exception $e) {
+  //   return false;
+  // }
   return $prepare;
-}
-
-function getReferences($ids, string $refTable, string $refId)
-{
-  if (is_array($ids)) {
-    $strIds = strArray($ids);
-    $query = "SELECT * FROM $refTable WHERE $refId IN $strIds";
-  } else {
-    $id = $ids;
-    $query = "SELECT * from $refTable where $refId = $id";
-  }
-  $prepare = pdo()->prepare($query);
-  $prepare->execute();
-  $data = $prepare->fetchAll(PDO::FETCH_ASSOC);
-  $data = array_column($data, 'id');
-  return $data;
 }
 
 function getRelatives($ids, $table1, $table2, $relTable, $refId1, $refId2)
@@ -66,49 +50,4 @@ function getRelatives($ids, $table1, $table2, $relTable, $refId1, $refId2)
   $data = $prepare->fetchAll(PDO::FETCH_ASSOC);
   $data = array_column($data, 'id');
   return $data;
-}
-
-
-
-function insertQuery($values, $table)
-{
-  $strColumns = strKeys($values);
-  $strHolders = strHolders($values);
-  return "INSERT INTO $table (" . $strColumns . ") VALUES (" . $strHolders . ")";
-}
-function updateQuery($table, $values, int $id)
-{
-  $strSetValues = strSetValues($values);
-  return "UPDATE $table SET $strSetValues WHERE id = $id";
-}
-
-function strKeys($values)
-{
-  return implode(', ', array_keys($values));
-}
-function strHolders($values)
-{
-  $keys = array_keys($values);
-  if (count($values) == 0) {
-    return '';
-  }
-  $strHolders = ':' . implode(', :', $keys);
-  return $strHolders;
-}
-function strSetValues($values)
-{
-  $firstTime = true;
-  $str = '';
-  foreach ($values as $key => $value) {
-    if (!$firstTime) {
-      $str .= ', ';
-    }
-    $str .= $key . ' = :' . $value;
-    $firstTime = false;
-  }
-  return $str;
-}
-function strArray($array)
-{
-  return '(' . implode(', ', $array) . ')';
 }

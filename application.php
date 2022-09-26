@@ -2,8 +2,7 @@
 
 use core\Request;
 use core\Route;
-
-
+use core\Token;
 
 define('DIR', __DIR__);
 define('PRE_URL', 'http://localhost/');
@@ -24,9 +23,9 @@ include_once 'functions/view.php';
 
 include_once 'functions/debug.php';
 
-include_once 'handlers/exceptions.php';
-set_error_handler('handleException');
-set_exception_handler('handleException');
+// include_once 'handlers/exceptions.php';
+// set_error_handler('handleException');
+// set_exception_handler('handleException');
 
 
 

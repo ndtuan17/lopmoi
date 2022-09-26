@@ -17,8 +17,8 @@
 
   <script src="/assets/js/lopmoi.js"></script>
   <script>
-    const form = document.querySelector('#form');
-    makeLoginForm(form, '/bientap/login', '/bientap');
+    // const form = document.querySelector('#form');
+    // makeLoginForm(form, '/bientap/login', '/bientap');
   </script>
 </body>
 

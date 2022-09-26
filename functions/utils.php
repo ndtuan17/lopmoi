@@ -15,6 +15,7 @@ function redirectTo(string $path)
 function regexRoute($str)
 {
   $str = str_replace(':any', '[\w-]*?', $str);
+  $str = str_replace(':num', '\d*?', $str);
   $str = '#^' . $str . '$#';
   return $str;
 }
@@ -32,4 +33,40 @@ function get($arr, $keys = null)
     return in_array($key, $keys);
   }, ARRAY_FILTER_USE_BOTH);
   return $result;
+}
+
+function set($key, $value, &$arr)
+{
+  $keys = explode('.', $key);
+  $code = '$arr';
+  foreach ($keys as $key) {
+    $code .= "['" . $key . "']";
+  }
+  $code .= ' = $value;';
+  eval($code);
+}
+
+function tunset($key, &$array)
+{
+  $keys = explode('.', $key);
+  $code = 'unset($array';
+  foreach ($keys as $key) {
+    $code .= "['" . $key . "']";
+  }
+  $code .= ");";
+  eval($code);
+}
+
+function checkAdmin()
+{
+  if (!user()->type('admin')) {
+    redirectTo('bientap/login');
+  }
+}
+
+function checkNotAdmin()
+{
+  if (user()->type('admin')) {
+    redirectTo('bientap');
+  }
 }

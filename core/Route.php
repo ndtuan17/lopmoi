@@ -13,7 +13,7 @@ class Route
   {
     self::add('GET', $path, $action);
   }
-  public static function post($path, $action)
+  public static function pst($path, $action)
   {
     self::add('POST', $path, $action);
   }
@@ -21,7 +21,7 @@ class Route
   {
     self::add('PUT', $path, $action);
   }
-  public static function delete($path, $action)
+  public static function del($path, $action)
   {
     self::add('DELETE', $path, $action);
   }

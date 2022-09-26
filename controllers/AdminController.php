@@ -8,30 +8,26 @@ class AdminController
 
   public function viewLogin()
   {
-    if (user()->type('admin')) {
-      redirectTo('bientap');
-    }
+    checkNotAdmin();
     display('pages/admin/login');
   }
 
   public function login()
   {
-    if (user()->type('admin')) {
-      redirectTo('bientap');
-    }
-    $email = request()->fetch('email');
-    $password = request()->fetch('password');
+    checkNotAdmin();
+    $email = get($_POST, 'email');
+    $password = get($_POST, 'password');
     if (!$email || !$password) {
-      header('HTTP/1.1 404 Thieu du lieu');
+      token()->set('flashes.error', 'Thieu thong tin');
+      redirectTo('bientap/login');
     }
     $admin = fetch('SELECT * FROM admins where email = :email', ['email' => $email]);
     if (empty($admin)) {
-      header('HTTP/1.1 404 Incorrect email');
-      exit;
+      token()->set('flashes.error', 'Email khong ton tai');
     }
     if (!password_verify($password, $admin['password'])) {
-      header('HTTP/1.1 404 Incorrect password');
-      exit;
+      token()->set('flashes.error', 'Mat khau khong dung');
+      // redirectTo('bientap/login');
     }
     $payload = [
       'expire' => time() + 3600 * 24 * 30,
@@ -45,17 +41,36 @@ class AdminController
       ]
     ];
 
-    $token = token()->generate($payload);
-    writeLog($token);
-    header('Content-Type: text/plain');
-    echo $token;
+    token()->set(null, value: $payload);
+    setcookie('token', token()->new(), time()+ 3600 * 24 * 30, '/');
   }
 
   public function home()
   {
-    if (!user()->type('admin')) {
-      redirectTo('bientap/login');
-    }
+    checkAdmin();
+    // redirectTo('bientap/classes');
     display('pages/admin/home');
+  }
+
+  public function show()
+  {
+    checkAdmin();
+    display('pages/admin/admins/show');
+  }
+
+  public function create()
+  {
+    checkAdmin();
+    display('pages/admin/admins/create');
+  }
+
+  public function store()
+  {
+    checkAdmin();
+    $input = get($_POST, 'csrf, name, email, password, permissions');
+    echo $input['csrf'];
+    var_dump(token()->get());
+    if (empty($input['name'])) {
+    }
   }
 }

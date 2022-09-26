@@ -5,11 +5,19 @@ namespace core;
 class Token
 {
 
-  private array $payload;
+  public array $currentPayload;
+  public array $newPayload;
+
+  public function __construct()
+  {
+    $this->currentPayload = $this->evalPayload();
+    $this->newPayload = $this->currentPayload;
+    unset($this->newPayload['flashes']);
+  }
 
   public function get($key = null)
   {
-    $payload = $this->payload();
+    $payload = $this->currentPayload;
     if ($key === null) {
       return $payload;
     }
@@ -19,17 +27,10 @@ class Token
     }
     return $payload;
   }
-  private function payload()
-  {
-    if(!isset($this->payload)){
-      $this->payload = $this->evalPayload();
-    }
-    return $this->payload;
-  }
   private function evalPayload()
   {
     //extract token parts
-    $jwt = $this->getJwt();
+    $jwt = $_COOKIE['token'] ?? false;
     $tokenParts = explode('.', $jwt);
     if (count($tokenParts) != 2) {
       return [];
@@ -53,34 +54,29 @@ class Token
     }
     return $payload;
   }
-  private function getJwt()
-  {
-    if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
-      preg_match('/Bearer\s(\S+)/', $_SERVER['HTTP_AUTHORIZATION'], $matches);
-      if (!isset($matches[1])) {
-        $jwt = false;
-      } else {
-        $jwt = $matches[1];
-      }
-    } elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
-      $jwt = isset($_COOKIE['token']) ? $_COOKIE['token'] : false;
-    } else {
-      $jwt = false;
-    }
 
-    return $jwt;
+  public function set($key = null, $value)
+  {
+    if ($key === null) {
+      $this->newPayload = $value;
+    } else {
+      set($key, $value, $this->newPayload);
+    }
   }
 
-  public function generate(array $payload): string
+  public function unset($key)
   {
-    $payload_encoded = $this->array_toBase64Url($payload);
+    tunset($key, $this->newPayload);
+  }
+
+  public function new()
+  {
+    $payload_encoded = $this->array_toBase64Url($this->newPayload);
     $signature = $this->generateSignature($payload_encoded);
 
     $jwt = "$payload_encoded.$signature";
     return $jwt;
   }
-
-
 
 
 
