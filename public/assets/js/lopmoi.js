@@ -30,7 +30,7 @@ function makeLogoutButton(button, redirectTo){
   console.log('vao make logout button');
   button.addEventListener('click', event => {
     console.log('clicked2');
-    document.cookie = 'token=; domain=localhost; path=/bientap; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
     localStorage.removeItem('token');
     window.open(redirectTo, '_self');
   });
